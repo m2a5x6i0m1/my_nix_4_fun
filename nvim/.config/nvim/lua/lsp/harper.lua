@@ -1,0 +1,36 @@
+vim.lsp.config("harper-ls", {
+	cmd = { "harper-ls", "--stdio" },
+	filetypes = {
+		"c",
+		"cpp",
+		"cs",
+		"gitcommit",
+		"go",
+		"html",
+		"java",
+		"javascript",
+		"lua",
+		"markdown",
+		"nix",
+		"python",
+		"ruby",
+		"rust",
+		"swift",
+		"toml",
+		"typescript",
+		"typescriptreact",
+		"haskell",
+		"cmake",
+		"typst",
+		"php",
+		"dart",
+	},
+	settings = {
+		["harper-ls"] = {
+			linters = {
+				ToDoHyphen = false,
+			},
+		},
+	},
+})
+vim.lsp.enable("harper-ls")
