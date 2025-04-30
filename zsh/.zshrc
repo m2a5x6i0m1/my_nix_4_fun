@@ -77,7 +77,7 @@ eval "$(zoxide init zsh)"
 
 #---- aliases ----
 alias ls='eza -1 --icons=always --color=always'
-alias cl='clear; fastfetch -l small --logo-padding-left 2 --logo-padding-right 4'
+alias cl='clear'
 alias lg='lazygit status'
 #-----------------
 
@@ -89,11 +89,6 @@ bindkey '^[[B' history-search-forward
 
 
 # ---- MUST STAY AT BOTTOM --------------------------------------------------
-
-
-#---- let's rock ----
-fastfetch -l small --logo-padding-left 2 --logo-padding-right 4 
-#--------------------
 
 
 #---- STARSHIP ----

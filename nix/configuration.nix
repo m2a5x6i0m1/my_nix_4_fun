@@ -71,6 +71,7 @@
     # Desktop apps
     telegram-desktop
     syncthing
+    gthumb
 
     # Tui
     starship
@@ -93,6 +94,7 @@
     # Dev
     lua-language-server
     harper
+    gcc
   ];
 
   fonts.packages = with pkgs; [ nerd-fonts.code-new-roman ];
