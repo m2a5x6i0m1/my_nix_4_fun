@@ -1,0 +1,79 @@
+format = """
+$line_break\
+[\\[]()\
+$username\
+[ ]()\
+$directory\
+[\\]]()\
+$character\
+"""
+
+right_format = """
+$git_branch\
+$git_status\
+$status\
+"""
+
+add_newline = false
+palette = 'my_palette'
+
+
+[profiles]
+transient="""
+[\\[$directory\\]]()\
+"""
+rtransient="""
+$git_branch\
+"""
+
+
+[palettes.my_palette]
+color_aqua = '#689d6a'
+color_green = '#98971a'
+color_blue = '#458588'
+red = "#f38ba8"
+green = "#6d9170"
+text = "#cdd6f4"
+surface0 = "#313244"
+base = "#1e1e2e"
+mantle = "#181825"
+
+
+[status]
+disabled = false
+format = """
+[\\[]()\
+[$status](fg:red)\
+[\\]]()\
+"""
+
+
+[username]
+show_always = true
+style_user =  "fg:text"
+style_root = "fg:red"
+format = '[$user]($style)'
+
+
+[directory]
+format = "[$path]($style)"
+truncation_length = 3
+
+
+[git_branch]
+style = "bg:green"
+format = """
+[\\[]()\
+[$branch]()\
+[\\]]()\
+"""
+
+
+[git_status]
+format = '([\[[$all_status$ahead_behind]($style)\]]() )'
+
+
+[character]
+disabled = false
+success_symbol = '[\$]()'
+error_symbol = '[\$]()'
