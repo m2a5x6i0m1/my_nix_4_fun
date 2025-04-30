@@ -11,7 +11,6 @@ source "${ZINIT_HOME}/zinit.zsh"
 autoload -Uz compinit && compinit
 
 # -- Plugins -------------
-zinit load jeffreytse/zsh-vi-mode
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
@@ -30,21 +29,6 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 #---------------------------------
-
-
-# -- Zsh vi mode configuration to work with fzf --
-set -o vi
-zvm_after_init_commands+=('[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh')
-zinit ice lucid wait
-zinit snippet OMZP::fzf
-zinit light junegunn/fzf
-zinit light junegunn/fzf-bin
-
-if [[ -f ~/.fzf.zsh ]]; then
-  source ~/.fzf.zsh
-fi
-setopt glob_dots
-#-------------------------------------------------
 
 
 #---- fd for fzf ----
@@ -83,6 +67,7 @@ alias lg='lazygit status'
 
 
 #---- keybindings ----
+bindkey -e
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 #---------------------

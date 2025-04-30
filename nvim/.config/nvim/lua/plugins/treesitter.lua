@@ -23,14 +23,14 @@ return {
 				"markdown_inline",
 				"html",
 				"regex",
-				"bash",
-				"lua",
 				"vim",
 				"vimdoc",
 				"c",
 				"cpp",
 				"hyprlang",
 				"python",
+				"bash",
+				"lua",
 			},
 
 			incremental_selection = {

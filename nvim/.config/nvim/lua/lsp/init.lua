@@ -4,6 +4,7 @@ vim.lsp.config("*", {
 })
 
 require("lsp.lua")
+require("lsp.nix")
 require("lsp.harper")
 
 ---@type table<number, {token:lsp.ProgressToken, msg:string, done:boolean}[]>

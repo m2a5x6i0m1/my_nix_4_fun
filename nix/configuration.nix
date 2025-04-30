@@ -1,7 +1,8 @@
 { config, lib, pkgs, ... }:
 
 {
-  imports = [ /etc/nixos/hardware-configuration.nix ];
+  imports =
+    [ /etc/nixos/hardware-configuration.nix ./packages.nix ./fonts.nix ];
 
   # Time Zone
   time.timeZone = "Europe/Moscow";
@@ -55,49 +56,6 @@
     defaultEditor = true;
   };
 
-  # PACKAGES
-  environment.systemPackages = with pkgs; [
-
-    # wayland
-    wl-clipboard
-    cliphist
-
-    # Hyprland
-    hyprsunset
-    waybar
-    kitty
-    wofi
-
-    # Desktop apps
-    telegram-desktop
-    syncthing
-    gthumb
-
-    # Tui
-    starship
-    yazi
-    fastfetch
-    lazygit
-    zsh
-
-    # Cli tools
-    zoxide
-    ripgrep
-    fzf
-    fd
-    stow
-    wget
-    unzip
-    git
-    eza
-
-    # Dev
-    lua-language-server
-    harper
-    gcc
-  ];
-
-  fonts.packages = with pkgs; [ nerd-fonts.code-new-roman ];
   system.stateVersion = "24.11"; # DO NOT CHANGE!
 }
 
