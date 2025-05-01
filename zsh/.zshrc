@@ -31,23 +31,10 @@ setopt hist_find_no_dups
 #---------------------------------
 
 
-#---- fd for fzf ----
-export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
-
-_fzf_compgen_path() {
-  fd --hidden --exclude .git . "$1"
-}
-_fzf_compgen_dir() {
-  fd --type=d --hidden --exclude .git . "$1"
-}
-#--------------------
-
-
 #---- completion styling ---------
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' menu no
 #---------------------------------
 
 
@@ -70,8 +57,6 @@ alias y='yazi'
 
 #---- keybindings ----
 bindkey -e
-bindkey '^[[A' history-search-backward
-bindkey '^[[B' history-search-forward
 #---------------------
 
 
