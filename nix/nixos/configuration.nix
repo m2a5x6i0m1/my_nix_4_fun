@@ -23,6 +23,14 @@
   # Allow proprietary soft
   nixpkgs.config.allowUnfree = true;
 
+  # Swap file
+  swapDevices = [
+    {
+      device = "/var/lib/swapfile";
+      size = 8 * 1024;
+    }
+  ];
+
   # Do not suspend on lid close
   services.logind.lidSwitch = "ignore";
 
