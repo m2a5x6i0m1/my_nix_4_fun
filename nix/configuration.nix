@@ -1,8 +1,16 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
-  imports =
-    [ /etc/nixos/hardware-configuration.nix ./packages.nix ./fonts.nix ];
+  imports = [
+    /etc/nixos/hardware-configuration.nix
+    ./packages.nix
+    ./users.nix
+  ];
 
   # Time Zone
   time.timeZone = "Europe/Moscow";
@@ -30,15 +38,6 @@
   # Ly login manager
   services.displayManager.ly.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users = {
-    defaultUserShell = pkgs.zsh;
-    users.max = {
-      isNormalUser = true;
-      extraGroups = [ "wheel" "input" "networkmanager" ];
-    };
-  };
-
   # Zshell
   programs.zsh.enable = true;
 
@@ -58,4 +57,3 @@
 
   system.stateVersion = "24.11"; # DO NOT CHANGE!
 }
-

@@ -42,8 +42,11 @@
     stylua # lua formatter
     nil # nix lsp
     nixfmt-rfc-style # nix formatter
+    prettierd
     harper
     gcc
   ];
+
+  fonts.packages = with pkgs; [ nerd-fonts.code-new-roman ];
 
 }

@@ -1,7 +1,7 @@
 format = """
 [\\[]()\
 $username\
-[:]()\
+[ ]()\
 $directory\
 [\\]]()\
 $character\
@@ -52,7 +52,7 @@ format = '[$branch]()'
 
 
 [git_status]
-format = '[$all_status]()'
+format = '[ $all_status $ahead_behind]()'
 
 
 [character]
