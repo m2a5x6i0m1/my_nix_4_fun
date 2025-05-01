@@ -47,7 +47,7 @@ eval "$(zoxide init zsh)"
 
 #---- aliases ----
 alias ls='eza -1 --icons=always --color=always'
-alias cl='clear'
+alias cl='clear; fastfetch -l nixos_old_small --logo-padding-left 1 --logo-padding-right 3'
 alias lg='lazygit'
 alias nv='nvim'
 alias sv='sudo -E nvim'
@@ -62,10 +62,31 @@ bindkey -e
 
 # ---- MUST STAY AT BOTTOM --------------------------------------------------
 
+fastfetch -l nixos_old_small --logo-padding-left 1 --logo-padding-right 3
 
 #---- STARSHIP ----
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 eval "$(starship init zsh)"
+
+TRANSIENT_PROMPT="${PROMPT// prompt / prompt --profile transient }"
+TRANSIENT_RPROMPT="${PROMPT// prompt / prompt --profile rtransient }"
+
+autoload -Uz add-zle-hook-widget
+add-zle-hook-widget zle-line-finish transient-prompt
+
+function transient-prompt() {
+    PROMPT="$TRANSIENT_PROMPT" RPROMPT="$TRANSIENT_RPROMPT" zle .reset-prompt
+}
 #------------------
 
 
+#---- yazi shell wrapper ----
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+#----------------------------

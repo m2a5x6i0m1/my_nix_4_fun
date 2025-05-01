@@ -5,6 +5,7 @@
   environment.systemPackages = with pkgs; [
 
     # wayland
+    swaynotificationcenter
     wl-clipboard
     cliphist
 
@@ -17,6 +18,7 @@
     # Desktop apps
     telegram-desktop
     syncthing
+    spotify
     gthumb
 
     # Tui
@@ -36,6 +38,7 @@
     unzip
     git
     eza
+    wev
 
     # Dev
     lua-language-server # lua lsp

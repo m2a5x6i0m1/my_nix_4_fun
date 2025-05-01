@@ -10,9 +10,9 @@ halign=fill
 orientation=vertical
 content_halign=fill
 insensitive=true
-allow_images=false
-image_size=28
+allow_images=true
+image_size=23
 gtk_dark=true
 
-key_up=Alt-k
-key_down=Alt-j
+key_up=k
+key_down=j

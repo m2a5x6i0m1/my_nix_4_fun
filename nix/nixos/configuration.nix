@@ -20,6 +20,9 @@
   boot.loader.efi.canTouchEfiVariables = true;
   systemd.tpm2.enable = false;
 
+  # Allow proprietary soft
+  nixpkgs.config.allowUnfree = true;
+
   # Do not suspend on lid close
   services.logind.lidSwitch = "ignore";
 
