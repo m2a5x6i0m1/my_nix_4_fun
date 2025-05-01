@@ -48,7 +48,6 @@ _fzf_compgen_dir() {
 #---- completion styling ---------
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-zstyle ':completion:*' menu no
 #---------------------------------
 
 
@@ -62,7 +61,10 @@ eval "$(zoxide init zsh)"
 #---- aliases ----
 alias ls='eza -1 --icons=always --color=always'
 alias cl='clear'
-alias lg='lazygit status'
+alias lg='lazygit'
+alias nv='nvim'
+alias sv='sudo -E nvim'
+alias y='yazi'
 #-----------------
 
 
@@ -79,26 +81,6 @@ bindkey '^[[B' history-search-forward
 #---- STARSHIP ----
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 eval "$(starship init zsh)"
-
-# TRANSIENT_PROMPT="${PROMPT// prompt / prompt --profile transient }"
-# TRANSIENT_RPROMPT="${PROMPT// prompt / prompt --profile rtransient }"
-# 
-# autoload -Uz add-zle-hook-widget
-# add-zle-hook-widget zle-line-finish transient-prompt
-# 
-# function transient-prompt() {
-#     PROMPT="$TRANSIENT_PROMPT" RPROMPT="$TRANSIENT_RPROMPT" zle .reset-prompt
-# }
 #------------------
 
 
-#---- yazi shell wrapper ----
-function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
-}
-#----------------------------
