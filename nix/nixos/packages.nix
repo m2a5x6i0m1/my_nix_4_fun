@@ -29,15 +29,15 @@
     zsh
 
     # Cli tools
-    zoxide
+    busybox
+    brightnessctl
     ripgrep
-    fzf
+    zoxide
     fd
-    stow
-    wget
-    unzip
-    git
+    fzf
     eza
+    git
+    stow
     wev
 
     # Dev
