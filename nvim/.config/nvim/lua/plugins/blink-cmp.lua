@@ -4,10 +4,8 @@ return {
 	opts = {
 		keymap = {
 			preset = "none",
-			["<M-k>"] = { "select_prev", "fallback" },
-			["<M-j>"] = { "select_next", "fallback" },
-			["<M-]>"] = { "snippet_forward" },
-			["<M-[>"] = { "snippet_backward" },
+			["<]]>"] = { "snippet_forward", "fallback" },
+			["<[[>"] = { "snippet_backward", "fallback" },
 			["<Tab>"] = { "select_next", "fallback" },
 			["<M-Tab>"] = { "select_prev", "fallback" },
 			["<CR>"] = { "accept", "fallback" },
@@ -51,6 +49,5 @@ return {
 			nerd_font_variant = "normal",
 		},
 		signature = { enabled = true },
-
 	},
 }

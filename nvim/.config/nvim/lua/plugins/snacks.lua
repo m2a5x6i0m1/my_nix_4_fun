@@ -5,7 +5,7 @@ return {
 	opts = {
 
 		bigfile = { enabled = true },
-    image = { enabled = true },
+		image = { enabled = true },
 		input = { enabled = true },
 		words = { enabled = true },
 		scope = { cursor = false },
@@ -22,10 +22,14 @@ return {
 			enabled = true,
 			ui_select = true,
 			matcher = {
-				frecency = false, -- useful but impacts performance
+				frecency = true, -- useful but impacts performance
 			},
 			layout = {
-				preset = "ivy_split",
+				cycle = true,
+				--- Use the telescope layout or vertical if the window is too narrow
+				preset = function()
+					return vim.o.columns >= 120 and "telescope" or "ivy_split"
+				end,
 			},
 			formatters = {
 				file = { icon_width = 3 },

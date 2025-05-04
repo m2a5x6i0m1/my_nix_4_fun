@@ -15,7 +15,7 @@ return {
 
 			format_on_save = {
 				lsp_fallback = true,
-				timeout_ms = 2000,
+				timeout_ms = 2500,
 			},
 		})
 	end,

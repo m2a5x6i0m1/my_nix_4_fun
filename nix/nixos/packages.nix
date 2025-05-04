@@ -20,6 +20,7 @@
     syncthing
     spotify
     gthumb
+    pwvucontrol
 
     # Tui
     starship

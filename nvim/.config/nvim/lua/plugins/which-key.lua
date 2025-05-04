@@ -23,9 +23,5 @@ return {
 			group = "", -- symbol prepended to a group
 			mappings = false,
 		},
-		keys = {
-			scroll_down = "<M-j>", -- Binding to scroll down inside the popup
-			scroll_up = "<M-k>", -- Binding to scroll up inside the popup
-		},
 	},
 }

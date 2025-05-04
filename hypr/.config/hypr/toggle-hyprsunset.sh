@@ -16,7 +16,7 @@ enable_sunset() {
 disable_sunset() {
 	printf "false" >"$STATUS_FILE"
 
-  hyprctl hyprsunset temperature 4000
+  hyprctl hyprsunset temperature 3500
 }
 
 if ! [ -f "$STATUS_FILE" ]; then

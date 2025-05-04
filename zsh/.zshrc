@@ -48,7 +48,7 @@ eval "$(zoxide init zsh)"
 #---- aliases ----
 alias ls='eza -1 --icons=always --color=always'
 alias cl='clear; fastfetch -l nixos_old_small --logo-padding-left 1 --logo-padding-right 3'
-alias lg='lazygit'
+alias lg='lazygit status'
 alias svim='sudo -E nvim'
 alias y='yazi'
 #-----------------
