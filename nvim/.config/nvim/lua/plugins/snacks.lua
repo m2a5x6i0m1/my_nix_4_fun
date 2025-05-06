@@ -20,6 +20,7 @@ return {
 		},
 		picker = {
 			enabled = true,
+			prompt = "  ",
 			ui_select = true,
 			matcher = {
 				frecency = true, -- useful but impacts performance
@@ -28,7 +29,7 @@ return {
 				cycle = true,
 				--- Use the telescope layout or vertical if the window is too narrow
 				preset = function()
-					return vim.o.columns >= 120 and "telescope" or "ivy_split"
+					return vim.o.columns >= 120 and "telescope" or "dropdown"
 				end,
 			},
 			formatters = {

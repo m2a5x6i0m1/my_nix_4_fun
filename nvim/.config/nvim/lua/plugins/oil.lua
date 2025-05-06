@@ -18,8 +18,6 @@ return {
 				["gl"] = function()
 					require("oil").set_columns({ "icon" })
 				end,
-				["<M-j>"] = "actions.preview_scroll_down",
-				["<M-k>"] = "actions.preview_scroll_up",
 			},
 		})
 
