@@ -30,7 +30,7 @@ return {
 				},
 				max_height = 10,
 				scrollbar = false,
-				direction_priority = { "n", "s" },
+				direction_priority = { "s", "n" },
 			},
 			keyword = { range = "full" },
 			ghost_text = { enabled = true },

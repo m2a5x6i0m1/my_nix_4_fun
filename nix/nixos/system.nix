@@ -26,12 +26,12 @@
 
   # Automatic system upgrade
   system.autoUpgrade.enable = true;
-  system.autoUpgrade.dates = "weekly";
+  system.autoUpgrade.dates = "monthly";
 
   # Automatic garbage collect
   nix.gc.automatic = true;
   nix.gc.dates = "daily";
-  nix.gc.options = "--delete-older-than 3d";
+  nix.gc.options = "--delete-older-than 7d";
   nix.settings.auto-optimise-store = true;
 
 }

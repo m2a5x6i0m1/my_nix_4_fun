@@ -4,7 +4,7 @@
 
   environment.systemPackages = with pkgs; [
 
-    # wayland
+    # Wayland
     swaynotificationcenter
     wl-clipboard
     cliphist
@@ -27,25 +27,25 @@
     yazi
     fastfetch
     lazygit
+    btop
     zsh
 
     # Cli tools
-    busybox
-    brightnessctl
+    git
     ripgrep
     zoxide
+    stow
     fd
     fzf
-    eza
-    git
-    stow
     wev
+    wget
+    eza
 
     # Dev
-    lua-language-server # lua lsp
-    stylua # lua formatter
-    nil # nix lsp
-    nixfmt-rfc-style # nix formatter
+    lua-language-server
+    stylua
+    nil
+    nixfmt-rfc-style
     prettierd
     harper
     gcc

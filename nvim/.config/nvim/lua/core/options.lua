@@ -27,8 +27,8 @@ vim.opt.scrolloff = 5
 
 -- appearance
 vim.opt.termguicolors = true -- true color support
-vim.opt.conceallevel = 2 -- related to render-Markdown plugin
 vim.opt.signcolumn = "yes" -- Show sign column so that text doesn't shift
+vim.opt.conceallevel = 0
 
 -- split windows
 vim.opt.splitright = true -- Split vertical window to the right
@@ -54,7 +54,7 @@ vim.diagnostic.config({
 		-- 	[vim.diagnostic.severity.INFO] = "~",
 		-- },
 		text = {
-			[vim.diagnostic.severity.ERROR] = " ",
+			[vim.diagnostic.severity.ERROR] = " ",
 			[vim.diagnostic.severity.WARN] = " ",
 			[vim.diagnostic.severity.HINT] = "󰠠 ",
 			[vim.diagnostic.severity.INFO] = " ",
