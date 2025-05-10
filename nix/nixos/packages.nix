@@ -27,27 +27,26 @@
     yazi
     fastfetch
     lazygit
-    btop
     zsh
 
     # Cli tools
     git
+    busybox
     ripgrep
     zoxide
     stow
     fd
     fzf
     wev
-    wget
     eza
 
     # Dev
     lua-language-server
-    stylua
+    harper
     nil
+    stylua
     nixfmt-rfc-style
     prettierd
-    harper
     gcc
   ];
 

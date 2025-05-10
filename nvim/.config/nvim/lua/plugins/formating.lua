@@ -4,18 +4,18 @@ return {
 	config = function()
 		require("conform").setup({
 			formatters_by_ft = {
+				cpp = { "clang-format" },
 				lua = { "stylua" },
 				nix = { "nixfmt" },
-				python = { "isort", "black" },
-				cpp = { "clang-format" },
-				css = { "prettier" },
-				json = { "prettier" },
 				markdown = { "prettierd" },
+				json = { "prettierd" },
+				css = { "prettierd" },
 			},
 
-			format_on_save = {
+			format_after_save = {
 				lsp_fallback = true,
-				timeout_ms = 2500,
+				async = true,
+				-- timeout_ms = 2500,
 			},
 		})
 	end,

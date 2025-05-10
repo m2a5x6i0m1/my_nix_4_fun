@@ -22,6 +22,7 @@ return {
 			},
 			heading = {
 				border = true,
+				sign = false,
 			},
 		})
 		vim.keymap.set("n", "<leader>tm", "<cmd>RenderMarkdown buf_toggle<cr>", { desc = "Toggle markdown rendering" })

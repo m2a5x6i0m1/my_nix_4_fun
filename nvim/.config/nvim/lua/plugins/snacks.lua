@@ -29,7 +29,7 @@ return {
 				cycle = true,
 				--- Use the telescope layout or vertical if the window is too narrow
 				preset = function()
-					return vim.o.columns >= 120 and "telescope" or "dropdown"
+					return vim.o.columns >= 120 and "telescope" or "ivy_split"
 				end,
 			},
 			formatters = {
@@ -91,9 +91,9 @@ return {
 			desc = "Notes",
 		},
 		{
-			"<leader>fc",
+			"<leader>fd",
 			function()
-				Snacks.picker.files({ cwd = vim.fn.stdpath("config") })
+				Snacks.picker.files({ cwd = "~/dotfiles", hidden = true })
 			end,
 			desc = "Config Files",
 		},
@@ -110,13 +110,6 @@ return {
 				Snacks.picker.help()
 			end,
 			desc = "Help Pages",
-		},
-		{
-			"<leader>fm",
-			function()
-				Snacks.picker.man()
-			end,
-			desc = "Man Pages",
 		},
 		{
 			"<leader>fg",
