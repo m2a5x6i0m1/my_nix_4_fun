@@ -7,15 +7,19 @@ fi
 source "${ZINIT_HOME}/zinit.zsh"
 #--------------
 
-# Performance optimization for completion system
-autoload -Uz compinit && compinit
-
-# -- Plugins -------------
+# -- Big 3 plugins -------------
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 # ------------------------
 
+#---- completion ---------
+zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
+zstyle ':completion:*' matcher-list '+' '+m:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'r:|[._-]=** r:|=** l:|=*'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+
+autoload -Uz compinit && compinit -C # don't forget to manually remove .zcompdump when changing this file or upgrading system
+#-------------------------
 
 #---- HISTORY --------------------
 HISTFILE=~/.zsh_history
@@ -30,36 +34,24 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 #---------------------------------
 
-
-#---- completion styling ---------
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-zstyle ':completion:*' menu no
-#---------------------------------
-
+#---- keybindings ----
+bindkey -e
+alias ls='eza -1 --icons=always --color=always'
+alias cl='clear; fastfetch -l nixos_old_small --logo-padding-left 1 --logo-padding-right 3'
+alias lg='lazygit status'
+alias sv='sudo -E nvim'
+alias nv='nvim'
+#---------------------
 
 #---- some random stuff ----
 export MANPAGER="nvim +Man!"
 export EDITOR="nvim"
 eval "$(zoxide init zsh)"
+eval "$(fzf --zsh)"
 #---------------------------
 
-
-#---- aliases ----
-alias ls='eza -1 --icons=always --color=always'
-alias cl='clear; fastfetch -l nixos_old_small --logo-padding-left 1 --logo-padding-right 3'
-alias lg='lazygit status'
-alias svim='sudo -E nvim'
-alias y='yazi'
-#-----------------
-
-
-#---- keybindings ----
-bindkey -e
-#---------------------
-
-
 # ---- MUST STAY AT BOTTOM --------------------------------------------------
+
 
 fastfetch -l nixos_old_small --logo-padding-left 1 --logo-padding-right 3
 
@@ -77,15 +69,3 @@ function transient-prompt() {
     PROMPT="$TRANSIENT_PROMPT" RPROMPT="$TRANSIENT_RPROMPT" zle .reset-prompt
 }
 #------------------
-
-
-#---- yazi shell wrapper ----
-function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
-}
-#----------------------------

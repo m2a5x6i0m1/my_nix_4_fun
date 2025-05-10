@@ -21,6 +21,7 @@
     spotify
     gthumb
     pwvucontrol
+    obsidian
 
     # Tui
     starship
@@ -31,6 +32,7 @@
 
     # Cli tools
     git
+    curl
     busybox
     ripgrep
     zoxide
@@ -44,6 +46,7 @@
     lua-language-server
     harper
     nil
+    markdown-oxide
     stylua
     nixfmt-rfc-style
     prettierd

@@ -20,6 +20,22 @@ return {
 				min_chars = 1,
 				score_offset = 100,
 			},
+			mappings = {
+				-- Overrides the 'gf' mapping to work on markdown/wiki links within your vault.
+				["gf"] = {
+					action = function()
+						return require("obsidian").util.gf_passthrough()
+					end,
+					opts = { noremap = false, expr = true, buffer = true },
+				},
+				-- Smart action depending on context: follow link, show notes with tag, toggle checkbox, or toggle heading fold
+				["<cr>"] = {
+					action = function()
+						return require("obsidian").util.smart_action()
+					end,
+					opts = { buffer = true, expr = true },
+				},
+			},
 			daily_notes = {
 				folder = "Daily",
 				template = "Daily",
