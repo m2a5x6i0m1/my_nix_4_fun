@@ -7,20 +7,31 @@ fi
 source "${ZINIT_HOME}/zinit.zsh"
 # ---------------
 
-# ---- Big 3 plugins ----
-zinit light zdharma-continuum/fast-syntax-highlighting
-# zinit light zsh-users/zsh-syntax-highlighting
-zinit light zsh-users/zsh-autosuggestions
+# ---- Completions source ----
 zinit light zsh-users/zsh-completions
-# -----------------------
+# ----------------------------
 
-# ---- completion ----
+# ---- Completions ----
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
-zstyle ':completion:*' matcher-list '+' '+m:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'r:|[._-]=** r:|=** l:|=*'
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' matcher-list '' '+m:{[:lower:]}={[:upper:]}' '+m:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} r:|[._-]=** r:|=** l:|=*'
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' menu no # in order to work with fzf-tab
 
 autoload -Uz compinit && compinit -C
-# --------------------
+# ---------------------
+
+# ---- Fzf-tab ----
+zinit light Aloxaf/fzf-tab
+
+zstyle ':completion:*:git-checkout:*' sort false # disable sort when completing `git checkout`
+zstyle ':completion:*:descriptions' format '[%d]' # set descriptions format to enable group support
+zstyle ':fzf-tab:*' switch-group '<' '>' # switch group using `<` and `>`
+# -----------------
+
+# ---- Fancy stuff ----
+zinit light zdharma-continuum/fast-syntax-highlighting
+zinit light zsh-users/zsh-autosuggestions
+# -----------------------
 
 # ---- HISTORY ----
 HISTFILE=~/.zsh_history
@@ -48,6 +59,7 @@ alias cl='clear; fastfetch -l nixos_old_small --logo-padding-left 1 --logo-paddi
 alias lg='lazygit'
 alias sv='sudo -E nvim'
 alias nv='nvim'
+alias ..='cd ..'
 # -----------------
 
 # ---- some random stuff ----
@@ -73,7 +85,7 @@ _fzf_compgen_dir() {
 
 # ---- MUST STAY AT BOTTOM --------------------------------------------------
 
-
+fastfetch -l nixos_old_small --logo-padding-left 1 --logo-padding-right 3
 
 # ---- yazi shell wrapper ----
 function y() {
@@ -101,4 +113,3 @@ function transient-prompt() {
 }
 # ------------------
 
-fastfetch -l nixos_old_small --logo-padding-left 1 --logo-padding-right 3
