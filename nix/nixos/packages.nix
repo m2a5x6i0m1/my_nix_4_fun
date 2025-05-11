@@ -22,6 +22,7 @@
     gthumb
     pwvucontrol
     obsidian
+    libreoffice
 
     # Tui
     starship
@@ -46,7 +47,7 @@
     lua-language-server
     harper
     nil
-    markdown-oxide
+    # markdown-oxide
     stylua
     nixfmt-rfc-style
     prettierd
