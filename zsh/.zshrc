@@ -8,7 +8,8 @@ source "${ZINIT_HOME}/zinit.zsh"
 # ---------------
 
 # ---- Big 3 plugins ----
-zinit light zsh-users/zsh-syntax-highlighting
+zinit light zdharma-continuum/fast-syntax-highlighting
+# zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 # -----------------------
@@ -28,6 +29,7 @@ SAVEHIST=1000
 HISTDUP=erase
 setopt appendhistory
 setopt sharehistory
+setopt hist_ignore_space
 setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_ignore_dups
@@ -36,8 +38,8 @@ setopt hist_find_no_dups
 
 # ---- keybindings ----
 bindkey -e
-bindkey '^[[A' history-search-backward
-bindkey '^[[B' history-search-forward
+bindkey "^[OA" history-beginning-search-backward
+bindkey "^[OB" history-beginning-search-forward
 # ---------------------
 
 # ---- aliases ----
