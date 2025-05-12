@@ -95,6 +95,13 @@ return {
 			function()
 				Snacks.picker.files({ cwd = "~/dotfiles", hidden = true })
 			end,
+			desc = "Dotfiles",
+		},
+		{
+			"<leader>fc",
+			function()
+				Snacks.picker.files({ cwd = vim.fn.stdpath("config") })
+			end,
 			desc = "Config Files",
 		},
 		{

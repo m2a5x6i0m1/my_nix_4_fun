@@ -21,11 +21,24 @@ autoload -Uz compinit && compinit -C
 # ---------------------
 
 # ---- Fzf-tab ----
-zinit light Aloxaf/fzf-tab
-
-zstyle ':completion:*:git-checkout:*' sort false # disable sort when completing `git checkout`
-zstyle ':completion:*:descriptions' format '[%d]' # set descriptions format to enable group support
-zstyle ':fzf-tab:*' switch-group '<' '>' # switch group using `<` and `>`
+# zinit light Aloxaf/fzf-tab
+#
+# # disable sort when completing `git checkout`
+# zstyle ':completion:*:git-checkout:*' sort false
+#
+# # set descriptions format to enable group support
+# # don't use escape sequences (like '%F{red}%d%f') here, fzf-tab will ignore them
+# zstyle ':completion:*:descriptions' format '[%d]'
+#
+# # custom fzf flags
+# # fzf-tab does not follow FZF_DEFAULT_OPTS by default
+# zstyle ':fzf-tab:*' fzf-flags --color=fg:1,fg+:2
+#
+# # To make fzf-tab follow FZF_DEFAULT_OPTS.
+# # This may lead to unexpected behavior since some flags break this plugin. See Aloxaf/fzf-tab#455.
+# zstyle ':fzf-tab:*' use-fzf-default-opts yes
+#
+# zstyle ':fzf-tab:*' switch-group '<' '>' # switch group using `<` and `>`
 # -----------------
 
 # ---- Fancy stuff ----
@@ -70,16 +83,16 @@ eval "$(fzf --zsh)"
 # ---------------------------
 
 # ---- fd for fzf ----
-export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
-
-_fzf_compgen_path() {
-  fd --hidden --exclude .git . "$1"
-}
-_fzf_compgen_dir() {
-  fd --type=d --hidden --exclude .git . "$1"
-}
+# export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
+# export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+# export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
+#
+# _fzf_compgen_path() {
+#   fd --hidden --exclude .git . "$1"
+# }
+# _fzf_compgen_dir() {
+#   fd --type=d --hidden --exclude .git . "$1"
+# }
 # --------------------
 
 
