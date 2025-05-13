@@ -8,43 +8,19 @@ source "${ZINIT_HOME}/zinit.zsh"
 # ---------------
 
 # ---- Completions source ----
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 # ----------------------------
 
 # ---- Completions ----
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
 zstyle ':completion:*' matcher-list '' '+m:{[:lower:]}={[:upper:]}' '+m:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} r:|[._-]=** r:|=** l:|=*'
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-zstyle ':completion:*' menu no # in order to work with fzf-tab
+# zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' menu no
 
 autoload -Uz compinit && compinit -C
 # ---------------------
-
-# ---- Fzf-tab ----
-# zinit light Aloxaf/fzf-tab
-#
-# # disable sort when completing `git checkout`
-# zstyle ':completion:*:git-checkout:*' sort false
-#
-# # set descriptions format to enable group support
-# # don't use escape sequences (like '%F{red}%d%f') here, fzf-tab will ignore them
-# zstyle ':completion:*:descriptions' format '[%d]'
-#
-# # custom fzf flags
-# # fzf-tab does not follow FZF_DEFAULT_OPTS by default
-# zstyle ':fzf-tab:*' fzf-flags --color=fg:1,fg+:2
-#
-# # To make fzf-tab follow FZF_DEFAULT_OPTS.
-# # This may lead to unexpected behavior since some flags break this plugin. See Aloxaf/fzf-tab#455.
-# zstyle ':fzf-tab:*' use-fzf-default-opts yes
-#
-# zstyle ':fzf-tab:*' switch-group '<' '>' # switch group using `<` and `>`
-# -----------------
-
-# ---- Fancy stuff ----
-zinit light zdharma-continuum/fast-syntax-highlighting
-zinit light zsh-users/zsh-autosuggestions
-# -----------------------
 
 # ---- HISTORY ----
 HISTFILE=~/.zsh_history
