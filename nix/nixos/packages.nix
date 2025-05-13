@@ -41,6 +41,7 @@
     fd
     fzf
     wev
+    brightnessctl
     eza
 
     # Dev
