@@ -11,14 +11,12 @@
 
     # Hyprland
     hyprsunset
-    waybar
     kitty
     wofi
 
     # Desktop apps
     telegram-desktop
     syncthing
-    spotify
     gthumb
     pwvucontrol
     obsidian
@@ -30,6 +28,7 @@
     fastfetch
     lazygit
     zsh
+    htop
 
     # Cli tools
     git

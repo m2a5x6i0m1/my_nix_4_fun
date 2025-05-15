@@ -27,4 +27,7 @@
   # Browser
   programs.firefox.enable = true;
 
+  # Status bar
+  programs.waybar.enable = true;
+
 }
