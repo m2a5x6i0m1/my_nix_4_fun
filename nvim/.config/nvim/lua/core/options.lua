@@ -31,7 +31,7 @@ vim.opt.signcolumn = "yes" -- Show sign column so that text doesn't shift
 vim.opt.conceallevel = 0
 
 -- split windows
-vim.opt.splitright = true -- Split vertical window to the right
+vim.opt.splitleft = true -- Split vertical window to the right
 vim.opt.splitbelow = true -- Split horizontal window to the bottom
 
 -- Highlighting yanked text
@@ -47,12 +47,6 @@ vim.diagnostic.config({
 	virtual_lines = { current_line = true },
 	underline = true,
 	signs = {
-		-- text = {
-		-- 	[vim.diagnostic.severity.ERROR] = "?",
-		-- 	[vim.diagnostic.severity.WARN] = "!",
-		-- 	[vim.diagnostic.severity.HINT] = "~",
-		-- 	[vim.diagnostic.severity.INFO] = "~",
-		-- },
 		text = {
 			[vim.diagnostic.severity.ERROR] = " ",
 			[vim.diagnostic.severity.WARN] = " ",

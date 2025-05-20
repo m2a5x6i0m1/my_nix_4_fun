@@ -1,3 +1,3 @@
 require("core")
 require("Lazy")
-require("lsp")
+require("Lsp")

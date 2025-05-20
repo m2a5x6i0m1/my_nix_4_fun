@@ -3,17 +3,16 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>rh", ":nohl<CR>", { desc = "Remove highlights" })
 vim.keymap.set({ "n", "v" }, "x", '"_x')
 
--- for easier configuring
+-- shortcuts
 vim.keymap.set("n", "<leader>ll", "<cmd>Lazy<CR>", { desc = "Open Lazy" })
--- vim.keymap.set("n", "<leader>lm", "<cmd>Mason<CR>", { desc = "Open Mason" })
 vim.keymap.set("n", "<leader>lc", "<cmd>Oil ~/.config/nvim/lua/<CR>", { desc = "Open Config" })
 vim.keymap.set("n", "<leader>ln", "<cmd>Oil ~/notes/<CR>", { desc = "Open Notes" })
 
 -- window navigation
-vim.keymap.set("n", "<a-h>", "<C-w>h")
-vim.keymap.set("n", "<a-j>", "<C-w>j")
-vim.keymap.set("n", "<a-k>", "<C-w>k")
-vim.keymap.set("n", "<a-l>", "<C-w>l")
+vim.keymap.set("n", "<M-h>", "<C-w>h")
+vim.keymap.set("n", "<M-j>", "<C-w>j")
+vim.keymap.set("n", "<M-k>", "<C-w>k")
+vim.keymap.set("n", "<M-l>", "<C-w>l")
 
 -- window management
 vim.keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split vertically" })
@@ -36,9 +35,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 		opts.desc = "Show LSP references"
 		vim.keymap.set("n", "gr", "<cmd>lua Snacks.picker.lsp_references()<CR>", opts) -- The best
-
-		-- opts.desc = "Go to declaration"
-		-- vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
 
 		opts.desc = "Go to declaration"
 		vim.keymap.set("n", "gD", "<cmd>lua Snacks.picker.lsp_declarations()<CR>", opts)

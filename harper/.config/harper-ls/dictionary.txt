@@ -4,6 +4,8 @@ Cli
 Disko
 Grub2
 Kallocain
+LazyVim
+Neovide
 Nixvim
 Pipewire
 Skils
@@ -23,6 +25,7 @@ lua
 ly
 nixos
 passwd
+pomodoro
 prepended
 smth
 technic

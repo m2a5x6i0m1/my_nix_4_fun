@@ -12,10 +12,14 @@ return {
 				},
 			},
 			lsp = {
-				progress = { enabled = false },
-				message = { enabled = false, view = "mini" },
+				progress = { enabled = true },
+				message = { enabled = true, view = "mini" },
 				hover = { enabled = false },
 				signature = { enabled = false },
+				override = {
+					["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+					["vim.lsp.util.stylize_markdown"] = true,
+				},
 			},
 			messages = { enabled = true },
 			notify = { enabled = false },

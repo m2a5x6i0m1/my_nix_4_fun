@@ -1,6 +1,12 @@
 return {
 	"saghen/blink.cmp",
 	version = "*",
+	dependencies = {
+		{
+			"rafamadriz/friendly-snippets",
+			event = "VeryLazy",
+		},
+	},
 	opts = {
 		keymap = {
 			preset = "none",
@@ -15,7 +21,7 @@ return {
 			documentation = {
 				auto_show = true,
 				auto_show_delay_ms = 600,
-				window = { max_height = 10 },
+				window = { max_height = 16 },
 			},
 			list = {
 				selection = { preselect = false, auto_insert = false },
@@ -28,7 +34,7 @@ return {
 						{ gap = 2, "kind" },
 					},
 				},
-				max_height = 10,
+				max_height = 8,
 				scrollbar = false,
 				direction_priority = { "s", "n" },
 			},
@@ -38,6 +44,7 @@ return {
 		},
 
 		cmdline = {
+			enabled = true,
 			keymap = { preset = "inherit" },
 			completion = {
 				list = { selection = { preselect = false, auto_insert = false } },
