@@ -31,7 +31,7 @@ vim.opt.signcolumn = "yes" -- Show sign column so that text doesn't shift
 vim.opt.conceallevel = 0
 
 -- split windows
-vim.opt.splitleft = true -- Split vertical window to the right
+vim.opt.splitright = true -- Split vertical window to the right
 vim.opt.splitbelow = true -- Split horizontal window to the bottom
 
 -- Highlighting yanked text
