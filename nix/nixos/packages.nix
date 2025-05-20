@@ -43,15 +43,20 @@
     brightnessctl
     eza
 
-    # Dev
+    # Lsp
     lua-language-server
+    bash-language-server
+    clang-tools
     harper
     nil
-    # markdown-oxide
+
+    # Formatters
     stylua
     nixfmt-rfc-style
     prettierd
-    gcc
+
+    # Compilers
+    clang
   ];
 
   fonts.packages = with pkgs; [ nerd-fonts.code-new-roman ];

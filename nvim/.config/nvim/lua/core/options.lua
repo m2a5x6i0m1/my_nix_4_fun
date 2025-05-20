@@ -34,14 +34,6 @@ vim.opt.conceallevel = 0
 vim.opt.splitright = true -- Split vertical window to the right
 vim.opt.splitbelow = true -- Split horizontal window to the bottom
 
--- Highlighting yanked text
-vim.api.nvim_create_autocmd("TextYankPost", {
-	group = vim.api.nvim_create_augroup("highlight-yank", { clear = true }),
-	callback = function()
-		vim.highlight.on_yank()
-	end,
-})
-
 -- Better diagnostic
 vim.diagnostic.config({
 	virtual_lines = { current_line = true },

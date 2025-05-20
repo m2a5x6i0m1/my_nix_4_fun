@@ -16,7 +16,10 @@ return {
 		},
 		notifier = {
 			enabled = true,
-			timeout = 5000,
+			timeout = 3500,
+			width = { min = 40, max = 0.45 },
+			height = { min = 1, max = 0.6 },
+			margin = { top = 0, right = 0, bottom = 0 },
 		},
 		picker = {
 			enabled = true,
@@ -38,7 +41,7 @@ return {
 		},
 		styles = {
 			notification = {
-				wo = { wrap = true }, -- Wrap notifications
+				wo = { wrap = false },
 			},
 		},
 	},

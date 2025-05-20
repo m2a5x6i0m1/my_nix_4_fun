@@ -12,8 +12,8 @@ return {
 				},
 			},
 			lsp = {
-				progress = { enabled = true },
-				message = { enabled = true, view = "mini" },
+				progress = { enabled = false },
+				message = { enabled = false, view = "mini" },
 				hover = { enabled = false },
 				signature = { enabled = false },
 				override = {
