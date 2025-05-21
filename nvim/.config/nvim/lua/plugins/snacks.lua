@@ -5,7 +5,7 @@ return {
 	opts = {
 
 		words = { enabled = false },
-		image = { enabled = false },
+		image = { enabled = true },
 		quickfile = { enabled = true },
 		bigfile = { enabled = true },
 		input = { enabled = true },
@@ -19,9 +19,9 @@ return {
 			enabled = true,
 			timeout = 3500,
 			style = "fancy",
-			width = { min = 40, max = 0.48 },
-			height = { min = 1, max = 0.7 },
-			margin = { top = 0, right = 0, bottom = 1 },
+			width = { min = 40, max = 0.4 },
+			height = { min = 1, max = 0.6 },
+			margin = { top = 0, right = 1, bottom = 1 },
 		},
 		picker = {
 			enabled = true,

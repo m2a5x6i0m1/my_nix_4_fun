@@ -5,12 +5,6 @@ return {
 	},
 	config = function()
 		require("noice").setup({
-			cmdline = {
-				format = {
-					search_down = { kind = "search", pattern = "^/", icon = " ", lang = "regex" },
-					search_up = { kind = "search", pattern = "^%?", icon = " ", lang = "regex" },
-				},
-			},
 			lsp = {
 				progress = { enabled = false },
 				message = { enabled = false, view = "mini" },
@@ -24,7 +18,7 @@ return {
 			messages = { enabled = true },
 			notify = { enabled = false },
 			popupmenu = { enabled = false },
-			presets = { bottom_search = true },
+			presets = { bottom_search = false },
 
 			views = {
 				cmdline_popup = {
