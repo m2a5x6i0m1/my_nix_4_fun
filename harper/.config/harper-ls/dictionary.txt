@@ -14,6 +14,7 @@ Syncthing's
 Timebox
 UWSM
 Zshell
+alacritty
 btw
 dbus
 firefox
@@ -36,5 +37,6 @@ tui
 vpn
 waybar
 wayland
+wezterm
 wifi
 wishlist

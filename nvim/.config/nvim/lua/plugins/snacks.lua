@@ -25,15 +25,9 @@ return {
 			enabled = true,
 			prompt = "  ",
 			ui_select = true,
-			matcher = {
-				frecency = true, -- useful but impacts performance
-			},
 			layout = {
 				cycle = true,
-				--- Use the telescope layout or vertical if the window is too narrow
-				preset = function()
-					return vim.o.columns >= 120 and "telescope" or "ivy_split"
-				end,
+				preset = "ivy_split",
 			},
 			formatters = {
 				file = { icon_width = 3 },
@@ -41,7 +35,7 @@ return {
 		},
 		styles = {
 			notification = {
-				wo = { wrap = false },
+				wo = { wrap = true },
 			},
 		},
 	},

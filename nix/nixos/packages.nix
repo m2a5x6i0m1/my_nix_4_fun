@@ -8,19 +8,18 @@
     swaynotificationcenter
     wl-clipboard
     cliphist
-
-    # Hyprland
     hyprsunset
-    kitty
     wofi
+    wezterm
+    kitty
 
     # Desktop apps
     telegram-desktop
     syncthing
     gthumb
-    pwvucontrol
     obsidian
     libreoffice
+    pwvucontrol
 
     # Tui
     starship
@@ -36,11 +35,11 @@
     busybox
     ripgrep
     zoxide
-    stow
-    fd
-    fzf
-    wev
     brightnessctl
+    stow
+    fzf
+    fd
+    wev
     eza
 
     # Lsp
@@ -59,6 +58,10 @@
     clang
   ];
 
-  fonts.packages = with pkgs; [ nerd-fonts.code-new-roman ];
+  fonts.packages = with pkgs; [
+    nerd-fonts.code-new-roman
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.symbols-only
+  ];
 
 }
