@@ -4,11 +4,12 @@ return {
 	lazy = false,
 	opts = {
 
-		bigfile = { enabled = true },
-		image = { enabled = true },
-		input = { enabled = true },
 		words = { enabled = false },
-		scope = { cursor = false },
+		image = { enabled = false },
+		quickfile = { enabled = true },
+		bigfile = { enabled = true },
+		input = { enabled = true },
+		scope = { enabled = true, cursor = false },
 		indent = {
 			enabled = true,
 			indent = { char = "┊" },
@@ -17,9 +18,10 @@ return {
 		notifier = {
 			enabled = true,
 			timeout = 3500,
-			width = { min = 40, max = 0.45 },
-			height = { min = 1, max = 0.6 },
-			margin = { top = 0, right = 0, bottom = 0 },
+			style = "fancy",
+			width = { min = 40, max = 0.48 },
+			height = { min = 1, max = 0.7 },
+			margin = { top = 0, right = 0, bottom = 1 },
 		},
 		picker = {
 			enabled = true,

@@ -10,7 +10,6 @@
     cliphist
     hyprsunset
     wofi
-    wezterm
     kitty
 
     # Desktop apps
