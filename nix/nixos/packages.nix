@@ -10,6 +10,7 @@
     cliphist
     hyprsunset
     wofi
+    alacritty
     kitty
 
     # Desktop apps
@@ -35,6 +36,7 @@
     ripgrep
     zoxide
     brightnessctl
+    imagemagick
     stow
     fzf
     fd
