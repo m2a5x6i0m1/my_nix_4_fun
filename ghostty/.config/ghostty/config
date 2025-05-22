@@ -1,0 +1,52 @@
+# Run `ghostty +show-config --default --docs` to view a list of
+# all available config options and their default values.
+#
+# Additionally, each config option is also explained in detail
+# on Ghostty's website, at https://ghostty.org/docs/config.
+
+font-family = CodeNewRoman Nerd Font
+# font-family = JetBrainsMonoNL Nerd Font Mono
+
+theme = catppuccin-mocha
+
+font-size = 12
+font-synthetic-style = false
+# font-feature = -calt, -liga, -dlig
+
+window-padding-balance = true
+window-padding-color = extend
+adjust-box-thickness = -1
+
+background-opacity = 0.98
+background-blur = 5
+cursor-opacity = 0.8
+
+confirm-close-surface = false
+resize-overlay = never
+
+# Custom shaders to run after the default shaders. This is a file path
+# to a GLSL-syntax shader for all platforms.
+# 
+# Warning: Invalid shaders can cause Ghostty to become unusable such as by
+# causing the window to be completely black. If this happens, you can
+# unset this configuration to disable the shader.
+# 
+# On Linux, this requires OpenGL 4.2. Ghostty typically only requires
+# OpenGL 3.3, but custom shaders push that requirement up to 4.2.
+# 
+# The shader API is identical to the Shadertoy API: you specify a `mainImage`
+# function and the available uniforms match Shadertoy. The iChannel0 uniform
+# is a texture containing the rendered terminal screen.
+# 
+# If the shader fails to compile, the shader will be ignored. Any errors
+# related to shader compilation will not show up as configuration errors
+# and only show up in the log, since shader compilation happens after
+# configuration loading on the dedicated render thread.  For interactive
+# development, use [shadertoy.com](https://shadertoy.com).
+# 
+# This can be repeated multiple times to load multiple shaders. The shaders
+# will be run in the order they are specified.
+# 
+# Changing this value at runtime and reloading the configuration will only
+# affect new windows, tabs, and splits.
+custom-shader = 

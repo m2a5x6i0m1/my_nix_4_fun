@@ -21,7 +21,7 @@ return {
 				},
 			},
 			heading = {
-				border = true,
+				-- border = true,
 				sign = false,
 			},
 		})

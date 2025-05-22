@@ -5,7 +5,10 @@ return {
 	opts = {
 
 		words = { enabled = false },
-		image = { enabled = true },
+		image = {
+			enabled = false, -- You may not agree with me, but for me, image viewing inside of a console text editor is too much
+			formats = {},
+		},
 		quickfile = { enabled = true },
 		bigfile = { enabled = true },
 		input = { enabled = true },
@@ -21,7 +24,7 @@ return {
 			style = "fancy",
 			width = { min = 40, max = 0.4 },
 			height = { min = 1, max = 0.6 },
-			margin = { top = 0, right = 1, bottom = 1 },
+			margin = { top = 0, right = 0, bottom = 1 },
 		},
 		picker = {
 			enabled = true,

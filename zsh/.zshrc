@@ -7,19 +7,18 @@ fi
 source "${ZINIT_HOME}/zinit.zsh"
 # ---------------
 
-# ---- Completions source ----
+# ---- QoL plugins ----
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
-zinit light zdharma-continuum/fast-syntax-highlighting
-# ----------------------------
+# ---------------------
 
 # ---- Completions ----
-zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
-zstyle ':completion:*' matcher-list '' '+m:{[:lower:]}={[:upper:]}' '+m:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} r:|[._-]=** r:|=** l:|=*'
+autoload -Uz compinit 
+# zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
+# zstyle ':completion:*' matcher-list '' '+m:{[:lower:]}={[:upper:]}' '+m:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} r:|[._-]=** r:|=** l:|=*'
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' menu no
-
-autoload -Uz compinit && compinit -C
+compinit
 # ---------------------
 
 # ---- HISTORY ----
@@ -46,6 +45,10 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey "^[OA" history-beginning-search-backward-end
 bindkey "^[OB" history-beginning-search-forward-end
 # ---------------------
+
+# ---- Syntax highlighting ----
+zinit light zsh-users/zsh-syntax-highlighting # Must be invoked after all zle -N calls and compinit
+# -----------------------------
 
 # ---- aliases ----
 alias ls='eza -1 --icons=always --color=always'

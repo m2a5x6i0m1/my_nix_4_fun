@@ -8,16 +8,18 @@
     swaynotificationcenter
     wl-clipboard
     cliphist
-    hyprsunset
+    wev
     wofi
-    alacritty
-    kitty
+
+    hyprsunset
+    hyprshot
 
     # Desktop apps
     telegram-desktop
-    syncthing
-    gthumb
+    ghostty
     obsidian
+    gthumb
+    syncthing
     libreoffice
     pwvucontrol
 
@@ -40,7 +42,6 @@
     stow
     fzf
     fd
-    wev
     eza
 
     # Lsp
@@ -61,8 +62,6 @@
 
   fonts.packages = with pkgs; [
     nerd-fonts.code-new-roman
-    nerd-fonts.jetbrains-mono
-    nerd-fonts.symbols-only
   ];
 
 }
