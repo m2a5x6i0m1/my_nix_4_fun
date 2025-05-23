@@ -1,0 +1,12 @@
+Hyprland
+Neovide
+blinkoff
+blinkon
+blinkwait
+ghostty
+guicursor
+pixiedust
+railgun
+sonicboom
+vfx
+wireframe

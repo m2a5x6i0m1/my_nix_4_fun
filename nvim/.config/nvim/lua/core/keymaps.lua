@@ -24,3 +24,6 @@ vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>") -- exit term mode
 -- better search
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
+
+-- Fix for strange output being printed while switching language if using ghostty
+vim.keymap.set({ "n", "i", "v", "t" }, "<D-space>", "<Nop>", { noremap = true, silent = true })

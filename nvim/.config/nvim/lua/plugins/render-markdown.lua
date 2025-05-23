@@ -21,8 +21,15 @@ return {
 				},
 			},
 			heading = {
-				-- border = true,
+				border = true,
 				sign = false,
+			},
+			checkbox = {
+				unchecked = { icon = " 󰄱 " },
+				checked = {
+					icon = " 󰱒 ",
+					-- scope_highlight = "@markup.strikethrough"
+				},
 			},
 		})
 		vim.keymap.set("n", "<leader>tm", "<cmd>RenderMarkdown buf_toggle<cr>", { desc = "Toggle markdown rendering" })

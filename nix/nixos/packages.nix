@@ -11,6 +11,7 @@
     wev
     wofi
 
+    # Hyprland
     hyprsunset
     hyprshot
 
@@ -18,17 +19,18 @@
     telegram-desktop
     ghostty
     obsidian
-    gthumb
-    syncthing
-    libreoffice
     pwvucontrol
+    neovide
+    # gthumb
+    # syncthing
+    # spotify
+    # libreoffice
 
     # Tui
     starship
     yazi
     fastfetch
     lazygit
-    zsh
     htop
 
     # Cli tools

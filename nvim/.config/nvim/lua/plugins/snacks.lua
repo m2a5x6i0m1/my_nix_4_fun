@@ -5,19 +5,42 @@ return {
 	opts = {
 
 		words = { enabled = false },
+		quickfile = { enabled = true },
+		bigfile = { enabled = true },
+		input = { enabled = true },
+
 		image = {
 			enabled = false, -- You may not agree with me, but for me, image viewing inside of a console text editor is too much
 			formats = {},
 		},
-		quickfile = { enabled = true },
-		bigfile = { enabled = true },
-		input = { enabled = true },
-		scope = { enabled = true, cursor = false },
+
+		scope = {
+			enabled = true,
+			cursor = false,
+			treesitter = {
+				blocks = {
+					enabled = true,
+					"function_declaration",
+					"function_definition",
+					"method_declaration",
+					"method_definition",
+					"class_declaration",
+					"class_definition",
+					"do_statement",
+					"while_statement",
+					"repeat_statement",
+					"if_statement",
+					"for_statement",
+				},
+			},
+		},
+
 		indent = {
 			enabled = true,
 			indent = { char = "┊" },
 			scope = { char = "┊" },
 		},
+
 		notifier = {
 			enabled = true,
 			timeout = 3500,
@@ -26,6 +49,7 @@ return {
 			height = { min = 1, max = 0.6 },
 			margin = { top = 0, right = 0, bottom = 1 },
 		},
+
 		picker = {
 			enabled = true,
 			prompt = "  ",
@@ -38,16 +62,28 @@ return {
 				file = { icon_width = 3 },
 			},
 		},
+
+		terminal = {
+			enabled = true,
+			start_insert = true,
+			auto_insert = true,
+			auto_close = false,
+		},
+
 		styles = {
 			notification = {
 				wo = { wrap = true },
+			},
+			lazygit = {
+				width = 0,
+				height = 0,
 			},
 		},
 	},
 
 	keys = {
 
-		-- Top Pickers & Explorer
+		-- Top Pickers
 		{
 			"<leader><space>",
 			function()
@@ -247,14 +283,16 @@ return {
 			mode = { "n", "t" },
 		},
 		{
-			"<c-/>",
+			"<leader>;",
 			function()
-				Snacks.terminal()
+				Snacks.terminal.toggle()
 			end,
 			desc = "Toggle Terminal",
+			mode = { "n", "t" },
 		},
 	},
 	init = function()
+		-- Recommended settings
 		vim.api.nvim_create_autocmd("User", {
 			pattern = "VeryLazy",
 			callback = function()
@@ -270,6 +308,16 @@ return {
 				Snacks.toggle.diagnostics():map("<leader>td")
 				Snacks.toggle.inlay_hints():map("<leader>th")
 				Snacks.toggle.dim():map("<leader>tz")
+			end,
+		})
+
+		-- Oil integration
+		vim.api.nvim_create_autocmd("User", {
+			pattern = "OilActionsPost",
+			callback = function(event)
+				if event.data.actions.type == "move" then
+					Snacks.rename.on_rename_file(event.data.actions.src_url, event.data.actions.dest_url)
+				end
 			end,
 		})
 	end,
