@@ -1,3 +1,4 @@
+Ctrl
 Hyprland
 Neovide
 blinkoff
