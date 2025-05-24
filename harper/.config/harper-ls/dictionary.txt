@@ -1,6 +1,7 @@
 Ctrl
 Hyprland
 Neovide
+Vpn
 blinkoff
 blinkon
 blinkwait

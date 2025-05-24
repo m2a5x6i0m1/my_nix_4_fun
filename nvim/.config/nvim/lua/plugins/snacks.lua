@@ -66,7 +66,7 @@ return {
 		terminal = {
 			enabled = true,
 			start_insert = true,
-			auto_insert = true,
+			auto_insert = false,
 			auto_close = false,
 		},
 
@@ -283,7 +283,7 @@ return {
 			mode = { "n", "t" },
 		},
 		{
-			"<leader>;",
+			"<leader>.",
 			function()
 				Snacks.terminal.toggle()
 			end,
