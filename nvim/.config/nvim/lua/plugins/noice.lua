@@ -5,9 +5,14 @@ return {
 	},
 	config = function()
 		require("noice").setup({
+
+			messages = { enabled = true },
+			popupmenu = { enabled = false },
+			notify = { enabled = false },
+
 			lsp = {
-				progress = { enabled = false },
-				message = { enabled = false, view = "mini" },
+				progress = { enabled = true },
+				message = { enabled = true, view = "mini" },
 				hover = { enabled = false },
 				signature = { enabled = false },
 				override = {
@@ -15,10 +20,6 @@ return {
 					["vim.lsp.util.stylize_markdown"] = true,
 				},
 			},
-			messages = { enabled = true },
-			notify = { enabled = false },
-			popupmenu = { enabled = false },
-			presets = { bottom_search = false },
 
 			views = {
 				cmdline_popup = {

@@ -1,9 +1,5 @@
-{ pkgs, ... }:
-
-{
-
+{pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-
     # Wayland
     swaynotificationcenter
     wl-clipboard
@@ -51,11 +47,11 @@
     bash-language-server
     clang-tools
     harper
-    nil
+    nixd
 
     # Formatters
     stylua
-    nixfmt-rfc-style
+    alejandra
     prettierd
 
     # Compilers
@@ -65,5 +61,4 @@
   fonts.packages = with pkgs; [
     nerd-fonts.code-new-roman
   ];
-
 }

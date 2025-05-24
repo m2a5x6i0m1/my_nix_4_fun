@@ -2,10 +2,7 @@
   config,
   lib,
   ...
-}:
-
-{
-
+}: {
   # Time Zone
   time.timeZone = "Europe/Moscow";
 
@@ -33,5 +30,4 @@
   nix.gc.dates = "daily";
   nix.gc.options = "--delete-older-than 7d";
   nix.settings.auto-optimise-store = true;
-
 }

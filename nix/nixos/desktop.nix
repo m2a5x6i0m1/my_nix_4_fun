@@ -3,17 +3,14 @@
   lib,
   pkgs,
   ...
-}:
-
-{
-
+}: {
   # I use Neovim, btw :)
   programs.neovim = {
     enable = true;
     defaultEditor = true;
   };
 
-  # Zshell
+  # Z-shell
   programs.zsh.enable = true;
 
   # Ly login manager
@@ -29,5 +26,4 @@
 
   # Status bar
   programs.waybar.enable = true;
-
 }

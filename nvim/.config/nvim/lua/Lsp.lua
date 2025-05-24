@@ -3,7 +3,7 @@ vim.lsp.config("*", {
 	root_markers = { ".git" },
 })
 
-vim.lsp.enable("nil")
+vim.lsp.enable("nixd")
 vim.lsp.enable("bashls")
 vim.lsp.enable("harper-ls")
 vim.lsp.enable("luals")

@@ -17,6 +17,12 @@
   # Allow proprietary soft
   nixpkgs.config.allowUnfree = true;
 
+  # Allow flakes
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
+
   # Do not suspend on lid close
   services.logind.lidSwitch = "ignore";
 
