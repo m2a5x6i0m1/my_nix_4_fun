@@ -17,9 +17,8 @@ vim.keymap.set("n", "<M-l>", "<C-w>l")
 -- window management
 vim.keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split vertically" })
 vim.keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split horizontaly" })
-vim.keymap.set("n", "<leader>st", "<C-w>v <cmd>term<CR>", { desc = "Split term" })
-vim.keymap.set({ "n", "t" }, "<leader>x", "<cmd>close<CR>", { desc = "Close split" })
-vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>") -- exit term mode
+-- vim.keymap.set({ "n", "t" }, "<leader>x", "<cmd>close<CR>", { desc = "Close split" })
+-- vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>") -- exit term mode
 
 -- better search
 vim.keymap.set("n", "n", "nzzzv")

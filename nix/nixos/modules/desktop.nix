@@ -1,9 +1,4 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
+{...}: {
   # I use Neovim, btw :)
   programs.neovim = {
     enable = true;

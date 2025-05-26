@@ -1,17 +1,17 @@
-{
-  config,
-  lib,
-  ...
-}: {
+{...}: {
   # Time Zone
   time.timeZone = "Europe/Moscow";
 
   # Disable tpm
   systemd.tpm2.enable = false;
 
+  # Do not suspend on lid close
+  services.logind.lidSwitch = "ignore";
+
   # Boot
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.timeout = 2;
 
   # Swap file
   swapDevices = [

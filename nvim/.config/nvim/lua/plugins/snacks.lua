@@ -7,6 +7,7 @@ return {
 		words = { enabled = false },
 		quickfile = { enabled = true },
 		bigfile = { enabled = true },
+		terminal = { enabled = true },
 		input = { enabled = true },
 
 		image = {
@@ -63,11 +64,6 @@ return {
 			},
 		},
 
-		terminal = {
-			enabled = true,
-			auto_close = false,
-		},
-
 		styles = {
 			notification = {
 				wo = { wrap = true },
@@ -113,14 +109,7 @@ return {
 			desc = "Files",
 		},
 		{
-			"<leader>f.",
-			function()
-				Snacks.picker.files({ hidden = true })
-			end,
-			desc = "Hidden Once",
-		},
-		{
-			"<leader>fn",
+			"<leader>nf",
 			function()
 				Snacks.picker.files({ cwd = "~/notes/" })
 			end,
@@ -160,13 +149,6 @@ return {
 				Snacks.picker.grep()
 			end,
 			desc = "Grep",
-		},
-		{
-			"<leader>fp",
-			function()
-				Snacks.picker.projects()
-			end,
-			desc = "Projects",
 		},
 		{
 			"<leader>fu",
