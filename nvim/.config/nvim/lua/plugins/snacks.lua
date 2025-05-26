@@ -65,8 +65,6 @@ return {
 
 		terminal = {
 			enabled = true,
-			start_insert = true,
-			auto_insert = false,
 			auto_close = false,
 		},
 
