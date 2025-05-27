@@ -28,8 +28,10 @@
     fastfetch
     lazygit
     htop
+    nushell
 
     # Cli tools
+    uutils-coreutils-noprefix
     git
     curl
     busybox

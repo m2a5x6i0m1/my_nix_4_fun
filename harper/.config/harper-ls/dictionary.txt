@@ -1,4 +1,5 @@
 Alacritty
+Autologin
 Ctrl
 DHCP
 Disko
@@ -25,11 +26,13 @@ blinkwait
 btw
 cd
 cli
+cmd
 coreutils
 etc
 eza
 fd
 ghostty
+greetd
 gthumb
 guicursor
 http

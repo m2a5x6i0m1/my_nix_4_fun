@@ -6,6 +6,7 @@ vim.keymap.set({ "n", "v" }, "x", '"_x')
 -- shortcuts
 vim.keymap.set("n", "<leader>ll", "<cmd>Lazy<CR>", { desc = "Open Lazy" })
 vim.keymap.set("n", "<leader>lc", "<cmd>Oil ~/.config/nvim/lua/<CR>", { desc = "Open Config" })
+vim.keymap.set("n", "<leader>lx", "<cmd>Oil /etc/nixos<CR>", { desc = "Open NixOS Config" })
 vim.keymap.set("n", "<leader>ln", "<cmd>Oil ~/notes/<CR>", { desc = "Open Notes" })
 
 -- window navigation

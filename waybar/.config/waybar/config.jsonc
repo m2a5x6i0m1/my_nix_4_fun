@@ -46,7 +46,7 @@
   "backlight": {
     "format": "{icon}  {percent}%",
     "format-icons": ["", "", "", "", "", "", "", "", ""],
-    "on-click": "~/.config/hypr/toggle-hyprsunset.sh"
+    "on-click": "~/.config/hypr/scripts/toggle-hyprsunset.sh"
   },
 
   "pulseaudio": {
