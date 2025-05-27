@@ -6,6 +6,7 @@ Disko
 Dua
 Hyperfine
 Hyprland
+Hyprlock
 LazyVim
 Lsp
 Ly
