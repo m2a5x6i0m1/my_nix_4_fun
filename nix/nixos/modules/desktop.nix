@@ -1,21 +1,23 @@
 {pkgs, ...}: {
-  # Z-shell
-  programs.zsh.enable = true;
-
   # I use Neovim, btw :)
   programs.neovim = {
     enable = true;
     defaultEditor = true;
   };
 
+  # Z-shell
+  programs.zsh.enable = true;
+
   # Wayland compositor of my choice
-  programs.hyprland = {
-    enable = true;
-    withUWSM = true;
-  };
+  programs.hyprland.enable = true;
   programs.hyprlock.enable = true;
-  security.pam.services.hyprlock = {};
   services.hypridle.enable = true;
+  security.pam.services.hyprlock = {};
+
+  # UWSM
+  # programs.uwsm.enable = true;
+  # programs.hyprland.withUWSM = true;
+  # programs.uwsm.waylandCompositors = {};
 
   # Autologin with Greetd
   services = {
