@@ -17,8 +17,8 @@ vim.g.neovide_underline_stroke_scale = 1.5
 -- "ripple"
 -- "wireframe"
 
-vim.o.winblend = 20
-vim.o.pumblend = 20
+-- vim.o.winblend = 20
+-- vim.o.pumblend = 20
 
 vim.keymap.set("v", "<C-S-c>", '"+y') -- Copy
 vim.keymap.set("n", "<C-S-v>", '"+P') -- Paste normal mode

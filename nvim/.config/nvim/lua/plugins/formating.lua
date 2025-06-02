@@ -6,7 +6,7 @@ return {
 			formatters_by_ft = {
 				cpp = { "clang-format" },
 				lua = { "stylua" },
-				nix = { "alejandra" },
+				nix = { "nixfmt" },
 				markdown = { "prettierd" },
 				json = { "prettierd" },
 				css = { "prettierd" },
