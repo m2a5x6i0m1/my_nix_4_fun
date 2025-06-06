@@ -54,7 +54,9 @@ return {
 			ui_select = true,
 			layout = {
 				cycle = true,
-				preset = "ivy_split",
+				preset = function()
+					return vim.o.columns >= 120 and "telescope" or "ivy_split"
+				end,
 			},
 			formatters = {
 				file = { icon_width = 3 },

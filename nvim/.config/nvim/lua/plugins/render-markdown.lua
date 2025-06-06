@@ -30,6 +30,15 @@ return {
 					icon = " 󰱒 ",
 					-- scope_highlight = "@markup.strikethrough"
 				},
+				-- custom = {
+				-- 	todo = { raw = "[-]", rendered = " 󰄱 ", highlight = "RenderMarkdownTodo", scope_highlight = nil },
+				-- 	discarded = {
+				-- 		raw = "[~]",
+				-- 		rendered = " 󰄱 ",
+				-- 		highlight = "RenderMarkdownTodo",
+				-- 		scope_highlight = "@markup.strikethrough",
+				-- 	},
+				-- },
 			},
 			code = {
 				sign = false,

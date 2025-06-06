@@ -1,6 +1,6 @@
 Alacritty
+Alexithymia
 Autologin
-Chording
 Ctrl
 DHCP
 Disko
@@ -8,6 +8,7 @@ Dua
 Hyperfine
 Hyprland
 Hyprlock
+LLDB
 LOTM
 LazyVim
 Ly
@@ -16,8 +17,8 @@ NVF
 Ncspot
 Neovide
 Nixvim
+OS
 Oxidise
-Polyphasic
 TODO
 Tmux
 Tui
@@ -30,14 +31,17 @@ blinkon
 blinkwait
 btw
 cd
+chording
 cli
 cmd
+colorschemes
 coreutils
 etc
 eza
 fd
 ghostty
 greetd
+gruvbox
 gthumb
 guicursor
 http
@@ -51,6 +55,7 @@ nixpkgs
 passwd
 percepted
 pixiedust
+polyphasic
 pomodoro
 railgun
 ripgrep
@@ -63,6 +68,7 @@ syncthing
 technic
 timebox
 tmp
+tokyonight
 tpm
 uutils
 vfx
