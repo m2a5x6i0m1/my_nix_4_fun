@@ -3,7 +3,7 @@ format = """
 $username\
 [@]()\
 $directory\
-[\\]]()\
+[\\]](bold)\
 $character\
 """
 
@@ -58,6 +58,7 @@ format = '[$user]($style)'
 
 
 [directory]
+style = 'cyan'
 format = "[$path]($style)"
 truncation_length = 3
 
@@ -65,15 +66,15 @@ truncation_length = 3
 [git_branch]
 format = """
 [on ]()\
-[󰊢 $branch](fg:color_green)\
+[󰊢 $branch](fg:bold color_green)\
 """
 
 
 [git_status]
 conflicted = '='
-ahead = ''
-behind = ''
-diverged = ''
+ahead = ' ${count}'
+behind = ' ${count}'
+diverged = ' ${ahead_count} ${behind_count}'
 up_to_date = ''
 untracked = '?'
 stashed = '$'
@@ -89,5 +90,5 @@ format = """
 
 [character]
 disabled = false
-success_symbol = '[\$]()'
-error_symbol = '[\$]()'
+success_symbol = '[\$](bold)'
+error_symbol = '[\$](bold)'
