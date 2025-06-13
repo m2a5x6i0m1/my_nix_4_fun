@@ -5,15 +5,14 @@ return {
 	opts = {
 
 		image = { enabled = false, formats = {} },
+		words = { enabled = false },
 
 		quickfile = { enabled = true },
 		bigfile = { enabled = true },
 		terminal = { enabled = true },
 		input = { enabled = true },
-		words = { enabled = true },
 
 		scope = {
-			enabled = true,
 			cursor = false,
 		},
 
@@ -24,18 +23,12 @@ return {
 		},
 
 		notifier = {
-			enabled = true,
-			timeout = 3500,
-			style = "compact",
-			width = { min = 40, max = 0.4 },
-			height = { min = 1, max = 0.6 },
+			timeout = 4000,
 			margin = { top = 0, right = 0, bottom = 1 },
 		},
 
 		picker = {
-			enabled = true,
 			prompt = "  ",
-			ui_select = true,
 			layout = {
 				cycle = true,
 				preset = "ivy_split",
@@ -94,7 +87,7 @@ return {
 			function()
 				Snacks.picker.files({ cwd = "~/notes/" })
 			end,
-			desc = "Notes",
+			desc = "Find Notes",
 		},
 		{
 			"<leader>fd",
@@ -130,13 +123,6 @@ return {
 				Snacks.picker.grep()
 			end,
 			desc = "Grep",
-		},
-		{
-			"<leader>fu",
-			function()
-				Snacks.picker.undo()
-			end,
-			desc = "Undo History",
 		},
 
 		-- git
@@ -221,29 +207,6 @@ return {
 			desc = "Rename File",
 		},
 		{
-			"<leader>tn",
-			function()
-				Snacks.notifier.hide()
-			end,
-			desc = "Dismiss All Notifications",
-		},
-		{
-			"]]",
-			function()
-				Snacks.words.jump(vim.v.count1)
-			end,
-			desc = "Next Reference",
-			mode = { "n", "t" },
-		},
-		{
-			"[[",
-			function()
-				Snacks.words.jump(-vim.v.count1)
-			end,
-			desc = "Prev Reference",
-			mode = { "n", "t" },
-		},
-		{
 			"<C-/>",
 			function()
 				Snacks.terminal.toggle()
@@ -266,8 +229,8 @@ return {
 				end
 				vim.print = _G.dd -- Override print to use snacks for `:=` command
 
-				Snacks.toggle.diagnostics():map("<leader>td")
-				Snacks.toggle.inlay_hints():map("<leader>th")
+				Snacks.toggle.diagnostics():map("<leader>dt")
+				Snacks.toggle.inlay_hints():map("<leader>dh")
 			end,
 		})
 

@@ -42,6 +42,5 @@ return {
 			dash = { width = 75 },
 			bullet = { icons = { "◇", "◆", "○", "●" } },
 		})
-		vim.keymap.set("n", "<leader>tm", "<cmd>RenderMarkdown buf_toggle<cr>", { desc = "Toggle markdown rendering" })
 	end,
 }

@@ -53,7 +53,8 @@ zinit light zsh-users/zsh-syntax-highlighting # Must be invoked after all zle -N
 
 # ---- aliases ----
 alias ls='eza -1 --icons=always --color=always'
-alias cl='clear; fastfetch -l nixos_old_small --logo-padding-left 1 --logo-padding-right 3'
+# alias cl='clear; fastfetch -l nixos_old_small --logo-padding-left 1 --logo-padding-right 3'
+alias cl='clear'
 alias lg='lazygit status'
 alias sv='sudo -E nvim'
 alias nv='nvim'
@@ -83,7 +84,7 @@ _fzf_compgen_dir() {
 
 # ---- MUST STAY AT BOTTOM --------------------------------------------------
 
-fastfetch -l nixos_old_small --logo-padding-left 1 --logo-padding-right 3
+# fastfetch -l nixos_old_small --logo-padding-left 1 --logo-padding-right 3
 
 # ---- yazi shell wrapper ----
 function y() {
