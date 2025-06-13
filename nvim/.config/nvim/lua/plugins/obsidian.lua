@@ -90,9 +90,9 @@ return {
 		vim.keymap.set("n", "<leader>nd", "<cmd>Obsidian today<cr>", { desc = "Daily note" })
 		vim.keymap.set("n", "<leader>nN", "<cmd>Obsidian new_from_template<cr>", { desc = "New from template" })
 
-		-- vim.keymap.set("n", "<leader>nT", "<cmd>Obsidian template<cr>", { desc = "Insert template" })
-		-- vim.keymap.set("n", "<leader>nO", "<cmd>Obsidian open<cr>", { desc = "Open note with App" })
-		-- vim.keymap.set("v", "<leader>ne", "<cmd>Obsidian extract_note<cr>", { desc = "Extract to new note" }) -- Buggy, don't work with snack's vim.ui.input
+		vim.keymap.set("n", "<leader>nT", "<cmd>Obsidian template<cr>", { desc = "Insert template" })
+		vim.keymap.set("n", "<leader>nO", "<cmd>Obsidian open<cr>", { desc = "Open note with App" })
+		vim.keymap.set("v", "<leader>ne", ":Obsidian extract_note", { desc = "Extract to new note" })
 
 		vim.keymap.set("n", "<leader>nb", "<cmd>Obsidian backlinks<cr>", { desc = "Backlinks" })
 		vim.keymap.set("n", "<leader>nl", "<cmd>Obsidian links<cr>", { desc = "Outgoing links" })
