@@ -11,6 +11,7 @@ Fap
 Hyperfine
 Hyprland
 Hyprlock
+Keypoints
 LLDB
 LOTM
 LazyVim

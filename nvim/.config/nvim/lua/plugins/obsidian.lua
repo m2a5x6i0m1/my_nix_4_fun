@@ -86,13 +86,20 @@ return {
 			end,
 		})
 
-		vim.keymap.set("n", "<leader>nn", "<cmd>ObsidianNew<cr>", { desc = "New" })
-		vim.keymap.set("n", "<leader>nd", "<cmd>ObsidianToday<cr>", { desc = "Daily note" })
+		vim.keymap.set("n", "<leader>nn", "<cmd>Obsidian new<cr>", { desc = "New" })
+		vim.keymap.set("n", "<leader>nd", "<cmd>Obsidian today<cr>", { desc = "Daily note" })
+		vim.keymap.set("n", "<leader>nN", "<cmd>Obsidian new_from_template<cr>", { desc = "New from template" })
 
-		vim.keymap.set("n", "<leader>nN", "<cmd>ObsidianNewFromTemplate<cr>", { desc = "New from template" })
-		vim.keymap.set("n", "<leader>nt", "<cmd>ObsidianTemplate<cr>", { desc = "Insert template" })
+		-- vim.keymap.set("n", "<leader>nT", "<cmd>Obsidian template<cr>", { desc = "Insert template" })
+		-- vim.keymap.set("n", "<leader>nO", "<cmd>Obsidian open<cr>", { desc = "Open note with App" })
+		-- vim.keymap.set("v", "<leader>ne", "<cmd>Obsidian extract_note<cr>", { desc = "Extract to new note" }) -- Buggy, don't work with snack's vim.ui.input
 
-		vim.keymap.set("n", "<leader>nb", "<cmd>ObsidianBacklinks<cr>", { desc = "list backlinks to note" })
-		vim.keymap.set("n", "<leader>ng", "<cmd>ObsidianSearch<cr>", { desc = "Grep notes" })
+		vim.keymap.set("n", "<leader>nb", "<cmd>Obsidian backlinks<cr>", { desc = "Backlinks" })
+		vim.keymap.set("n", "<leader>nl", "<cmd>Obsidian links<cr>", { desc = "Outgoing links" })
+		vim.keymap.set("n", "<leader>nt", "<cmd>Obsidian tags<cr>", { desc = "Tags" })
+
+		vim.keymap.set("n", "<leader>nf", "<cmd>Obsidian quick_switch<cr>", { desc = "Find note" })
+		vim.keymap.set("n", "<leader>ns", "<cmd>Obsidian search<cr>", { desc = "Search through notes" })
+		vim.keymap.set("n", "<leader>nr", "<cmd>Obsidian rename<cr>", { desc = "Rename note" })
 	end,
 }

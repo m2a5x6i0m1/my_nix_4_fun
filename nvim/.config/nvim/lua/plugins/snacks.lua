@@ -83,13 +83,6 @@ return {
 			desc = "Files",
 		},
 		{
-			"<leader>nf",
-			function()
-				Snacks.picker.files({ cwd = "~/notes/" })
-			end,
-			desc = "Find Notes",
-		},
-		{
 			"<leader>fd",
 			function()
 				Snacks.picker.files({ cwd = "~/dotfiles", hidden = true })
@@ -118,11 +111,11 @@ return {
 			desc = "Help Pages",
 		},
 		{
-			"<leader>fg",
+			"<leader>fs",
 			function()
 				Snacks.picker.grep()
 			end,
-			desc = "Grep",
+			desc = "Search",
 		},
 
 		-- git
