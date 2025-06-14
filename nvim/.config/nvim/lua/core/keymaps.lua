@@ -1,8 +1,7 @@
 vim.g.mapleader = " "
 
-vim.keymap.set("n", "<leader>rh", ":nohl<CR>", { desc = "Remove highlights" })
 vim.keymap.set({ "n", "v" }, "x", '"_x')
-
+vim.keymap.set("n", "<leader>rh", ":nohl<CR>", { desc = "Remove highlights" })
 vim.keymap.set("n", "<leader>ll", "<cmd>Lazy<CR>", { desc = "Open Lazy" })
 
 -- window navigation

@@ -36,7 +36,7 @@ vim.opt.splitbelow = true -- Split horizontal window to the bottom
 
 -- Better diagnostic
 vim.diagnostic.config({
-	virtual_lines = { current_line = true },
+	virtual_text = true,
 	underline = true,
 	signs = {
 		text = {
@@ -47,7 +47,3 @@ vim.diagnostic.config({
 		},
 	},
 })
-
--- Different shell config for Neovim
-vim.fn.setenv("ZDOTDIR", "/home/max/.config/nvim/shell")
-vim.opt.shell = "zsh"
