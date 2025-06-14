@@ -47,3 +47,7 @@ vim.diagnostic.config({
 		},
 	},
 })
+
+-- Different shell config for Neovim
+vim.fn.setenv("ZDOTDIR", "/home/max/.config/nvim/shell")
+vim.opt.shell = "zsh"
