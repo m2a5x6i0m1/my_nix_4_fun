@@ -24,6 +24,7 @@ Nixvim
 OS
 Oxidise
 TODO
+Terraria
 Tmux
 Tui
 UWSM
