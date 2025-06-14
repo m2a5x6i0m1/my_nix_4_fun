@@ -12,9 +12,9 @@ return {
 				css = { "prettierd" },
 			},
 
-			format_on_save = {
+			format_after_save = {
 				lsp_fallback = false,
-				timeout = 500,
+				async = true,
 			},
 		})
 	end,

@@ -7,6 +7,7 @@ return {
 		image = { enabled = false, formats = {} },
 		words = { enabled = false },
 		terminal = { enabled = false },
+		statuscolumn = { enabled = false },
 
 		quickfile = { enabled = true },
 		bigfile = { enabled = true },
