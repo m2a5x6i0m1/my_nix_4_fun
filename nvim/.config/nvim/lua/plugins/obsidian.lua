@@ -58,7 +58,7 @@ return {
 			backlinks = { parse_headers = false },
 
 			note_frontmatter_func = function(note)
-				local out = { tags = note.tags, date = os.date("%Y-%m-%d"), done = false }
+				local out = { tags = note.tags, date = os.date("%Y-%m-%d") }
 				if note.metadata ~= nil and not vim.tbl_isempty(note.metadata) then
 					for k, v in pairs(note.metadata) do
 						out[k] = v

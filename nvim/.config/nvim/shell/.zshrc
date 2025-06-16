@@ -65,24 +65,8 @@ eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
 # ---------------------------
 
-# ---- fd for fzf ----
-export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
-
-_fzf_compgen_path() {
-  fd --hidden --exclude .git . "$1"
-}
-_fzf_compgen_dir() {
-  fd --type=d --hidden --exclude .git . "$1"
-}
-# --------------------
-
-
-# ---- MUST STAY AT BOTTOM --------------------------------------------------
-
 # ---- STARSHIP ----
-export STARSHIP_CONFIG=~/.config/nvim/shell/starship.toml
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
 eval "$(starship init zsh)"
 
 TRANSIENT_PROMPT="${PROMPT// prompt / prompt --profile transient }"

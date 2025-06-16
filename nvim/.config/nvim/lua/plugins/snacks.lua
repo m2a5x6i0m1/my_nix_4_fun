@@ -6,12 +6,12 @@ return {
 
 		image = { enabled = false, formats = {} },
 		words = { enabled = false },
-		terminal = { enabled = false },
 		statuscolumn = { enabled = false },
 
 		quickfile = { enabled = true },
 		bigfile = { enabled = true },
 		input = { enabled = true },
+		terminal = { enabled = true },
 
 		scope = {
 			cursor = false,
@@ -198,6 +198,14 @@ return {
 				Snacks.rename.rename_file()
 			end,
 			desc = "Rename File",
+		},
+		{
+			"<C-/>",
+			function()
+				Snacks.terminal.toggle()
+			end,
+			desc = "Toggle Terminal",
+			mode = { "n", "t" },
 		},
 	},
 	init = function()

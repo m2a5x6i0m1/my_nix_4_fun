@@ -2,7 +2,12 @@ vim.g.mapleader = " "
 
 vim.keymap.set({ "n", "v" }, "x", '"_x')
 vim.keymap.set("n", "<leader>rh", ":nohl<CR>", { desc = "Remove highlights" })
+
+-- shortcuts
 vim.keymap.set("n", "<leader>ll", "<cmd>Lazy<CR>", { desc = "Open Lazy" })
+vim.keymap.set("n", "<leader>lc", "<cmd>Oil ~/.config/nvim/lua/<CR>", { desc = "Open Config" })
+vim.keymap.set("n", "<leader>lx", "<cmd>Oil ~/nixos/<CR>", { desc = "Open NixOS Config" })
+vim.keymap.set("n", "<leader>ln", "<cmd>Oil ~/notes/<CR>", { desc = "Open Notes" })
 
 -- window navigation
 vim.keymap.set("n", "<M-h>", "<C-w>h")
@@ -18,5 +23,5 @@ vim.keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split horizontaly" })
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
--- Fix for strange output being printed while switching language using ghostty
+-- Fix for strange output being printed while switching language if using ghostty
 vim.keymap.set({ "n", "i", "v", "t" }, "<D-space>", "<Nop>", { noremap = true, silent = true })

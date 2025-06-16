@@ -22,8 +22,8 @@ vim.g.neovide_padding_left = 0
 -- "ripple"
 -- "wireframe"
 
-vim.o.winblend = 20
-vim.o.pumblend = 20
+vim.o.winblend = 10
+vim.o.pumblend = 10
 
 vim.keymap.set("v", "<C-S-c>", '"+y') -- Copy
 vim.keymap.set("n", "<C-S-v>", '"+P') -- Paste normal mode
