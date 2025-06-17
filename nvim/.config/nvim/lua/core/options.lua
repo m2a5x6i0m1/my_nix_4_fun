@@ -36,7 +36,7 @@ vim.opt.splitbelow = true -- Split horizontal window to the bottom
 
 -- Better diagnostic
 vim.diagnostic.config({
-	virtual_text = true,
+	virtual_text = { source = true },
 	underline = true,
 	signs = {
 		text = {
