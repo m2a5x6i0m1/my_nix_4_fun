@@ -17,6 +17,7 @@ LLDB
 LOTM
 LazyVim
 Ly
+MOC
 Mprocs
 NVF
 Ncspot

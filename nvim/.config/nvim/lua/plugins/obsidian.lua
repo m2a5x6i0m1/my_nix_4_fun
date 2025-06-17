@@ -49,7 +49,7 @@ return {
 			},
 
 			dir = "~/notes",
-			notes_subdir = "2 Main",
+			notes_subdir = "2 Areas (Main)",
 			new_notes_location = "notes_subdir",
 			templates = { folder = "Templates" },
 
